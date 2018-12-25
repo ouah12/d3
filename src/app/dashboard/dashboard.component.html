@@ -1,0 +1,15 @@
+<div>
+   <form [formGroup]="form" novalidate (ngSubmit)="getPieChagrt()">
+  
+     <input formControlName="dateFrom" type="date" useValueAsDate />
+     <input formControlName="dateTo" type="date" useValueAsDate />
+     <button type="submit" [disabled]="form.errors">Submit</button>
+     <!-- <label *ngIf="form.errors">{{ form.errors?.dates | json }}</label> -->
+                
+    </form>
+  
+    <app-chart-pie-protocol [name]='titleProtocol'></app-chart-pie-protocol>
+    <app-chart-remise [name]='titleRemise'></app-chart-remise>
+    
+
+</div>
